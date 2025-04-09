@@ -15,4 +15,4 @@ def executar_geo_ai():
         print("Nenhuma tarefa encontrada.")
 
 if __name__ == "__main__":
-    executar_geo_ai()
+    executar_geo_ai() 
