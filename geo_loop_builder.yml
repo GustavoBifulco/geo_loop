@@ -1,0 +1,22 @@
+name: GEOLOOP Builder
+
+on:
+  push:
+    branches: [ main ]
+  schedule:
+    - cron: '0 */6 * * *'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout código
+      uses: actions/checkout@v2
+
+    - name: Configurar Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: '3.x'
+
+    - name: Rodar Builder AI
+      run: python builder_ai/geo_ai_executor.py
